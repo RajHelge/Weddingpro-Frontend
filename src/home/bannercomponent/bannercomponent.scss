@@ -1,0 +1,118 @@
+@use '../../styles/layout/container' as container;
+
+@mixin bannerBase{
+   position: relative;
+    min-height: 100vh;
+    // display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../../../public/Images/banners/homepagebanner.png);
+    background-position: top;
+    background-position-x: center; 
+}
+
+@mixin banner-text($columns){
+    display: grid;
+    grid-template-columns: repeat($columns,1fr);
+    gap: 1;
+    color: white;
+    padding: 5px;
+}
+.section-left{color:white;}
+.banner{
+    @include container.mobile{
+        @include bannerBase;
+        
+    }
+    @include container.tablet{
+        @include bannerBase;
+        background-size:contain;
+        background-position: top;
+    }
+    @include container.desktop{
+       @include bannerBase;
+    background-size: cover;
+    background-position: top;
+    }
+}
+.banner-text{
+    @include container.mobile{
+        @include banner-text(1);
+        text-align: left;
+        justify-content:start;
+    }
+    @include container.tablet{
+        @include banner-text(2);
+    }
+    @include container.desktop{
+        @include banner-text(2);
+    }
+}
+
+// @mixin banner {
+//     position: relative;
+//     min-height: 100vh;
+//     display: flex;
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     background-image: url(../../../public/Images/banners/homepagebanner.png);
+//     background-position: top;
+//     background-position-x: center;
+// }
+// /* Mobile */
+// @mixin banner-container{
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     gap: 10;
+//     grid-row: 1;
+//     color: white;
+//     align-items: center;
+//     padding: 10px;
+
+// }
+// @media (max-width: 599px) {
+//     .banner{
+//         @include banner;
+//     }
+//     .banner-container{
+//         @include banner-container;
+//         grid-template-columns: 1fr;
+//     }
+//  }
+
+// /* Tablet */
+// @media (min-width: 600px) and (max-width: 959px) {
+//     .banner{
+//         @include banner;
+//     }
+//         .banner-container{
+//         @include banner-container;
+//         grid-template-columns: 1fr;
+//     }
+//  }
+
+// /* Desktop */
+// @media (min-width: 960px) and (max-width: 1279px) {
+//     .banner{
+//         @include banner;
+//         background-size: cover;
+
+//     }
+//         .banner-container{
+//         @include banner-container;
+//         grid-template-columns: 1fr;
+//     }
+//  }
+
+// /* Large Desktop */
+// @media (min-width: 1280px) { 
+//     .banner{
+//         @include banner;
+//         background-size: cover;
+//     }
+//         .banner-container{
+//         @include banner-container;
+//         grid-template-columns: 1fr;
+
+//     }
+// }

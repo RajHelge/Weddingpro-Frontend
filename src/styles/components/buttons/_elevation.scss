@@ -1,0 +1,34 @@
+/**
+ * =============================================================================
+ * WeddingPro Design System
+ * -----------------------------------------------------------------------------
+ * Component : Button
+ * File      : 05-elevation.scss
+ * Purpose   : Defines optional elevation levels for the button component using
+ *             CSS custom properties. This file only assigns shadow values.
+ * =============================================================================
+ */
+
+/* ==========================================================================
+   Flat (Default)
+   ========================================================================== */
+
+.wp-button--flat {
+
+  --wp-button-shadow: none;
+  --wp-button-hover-shadow: none;
+  --wp-button-active-shadow: none;
+
+}
+
+/* ==========================================================================
+   Elevated
+   ========================================================================== */
+
+.wp-button--elevated {
+
+  --wp-button-shadow: var(--wp-shadow-xs);
+  --wp-button-hover-shadow: var(--wp-shadow-sm);
+  --wp-button-active-shadow: var(--wp-shadow-xs);
+
+}

@@ -1,0 +1,56 @@
+/*==========================================================
+WeddingPro Design System
+
+File: _root.scss
+
+Description:
+Defines global browser configuration and application-wide
+behavior that is not tied to any specific HTML element.
+
+Contents:
+1. Root Configuration
+2. Scroll Behavior
+3. Text Selection
+
+Rule:
+❌ Do not style HTML elements here.
+✅ Only configure global browser behavior.
+
+==========================================================*/
+
+@use "../abstracts" as *;
+
+
+/*==========================================
+=            Root Configuration
+==========================================*/
+
+:root {
+
+  /*
+   * Browser should render built-in controls
+   * using the light color scheme.
+   */
+
+  color-scheme: light;
+
+}
+
+
+/*==========================================
+=            Scroll Behavior
+==========================================*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/*==========================================
+=            Text Selection
+==========================================*/
+
+::selection {
+  background-color: $selection-bg;
+  color: $selection-text;
+}

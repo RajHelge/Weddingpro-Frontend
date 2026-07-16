@@ -1,0 +1,82 @@
+/*==========================================================
+WeddingPro Design System
+
+File: _functions.scss
+
+Description:
+Reusable Sass utility functions.
+
+Contents:
+1. strip-unit()
+2. rem()
+3. em()
+4. fluid()
+
+Rule:
+❌ Never generate CSS here.
+✅ Only return calculated values.
+
+==========================================================*/
+
+@use "sass:math";
+
+
+
+/*==========================================
+=            Strip Unit
+==========================================*/
+
+@function strip-unit($value) {
+  @if type-of($value) == number and not unitless($value) {
+    @return math.div($value, ($value * 0 + 1));
+  }
+
+  @return $value;
+}
+
+
+
+/*==========================================
+=            PX → REM
+==========================================*/
+
+@function rem($px, $base: 16) {
+  @return math.div(strip-unit($px), $base) * 1rem;
+}
+
+
+
+/*==========================================
+=            PX → EM
+==========================================*/
+
+@function em($px, $base: 16) {
+  @return math.div(strip-unit($px), $base) * 1em;
+}
+
+
+
+/*==========================================
+=            Fluid Size
+==========================================*/
+
+@function fluid(
+  $min-size,
+  $max-size,
+  $min-viewport: 320,
+  $max-viewport: 1440
+) {
+
+  $slope: math.div(
+    strip-unit($max-size) - strip-unit($min-size),
+    $max-viewport - $min-viewport
+  );
+
+  $intercept: strip-unit($min-size) - ($slope * $min-viewport);
+
+  @return clamp(
+    rem($min-size),
+    calc(#{$intercept}rem + #{100 * $slope}vw),
+    rem($max-size)
+  );
+}

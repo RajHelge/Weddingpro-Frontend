@@ -1,0 +1,31 @@
+/*==========================================================
+WeddingPro Design System
+
+File: _radius.scss
+
+Description:
+Border radius design tokens.
+
+Contents:
+1. Border Radius Scale
+
+Rule:
+❌ Never use hardcoded border-radius values.
+✅ Always use radius tokens.
+
+==========================================================*/
+
+
+/*==========================================
+=            Border Radius Scale
+==========================================*/
+
+$radius-none: 0;                   // Use Case Tables, separators
+
+$radius-xs: 0.125rem;    // 2px    Tiny badges
+$radius-sm: 0.25rem;     // 4px    Inputs
+$radius-md: 0.5rem;      // 8px    Buttons
+$radius-lg: 0.75rem;     // 12px   Cards
+$radius-xl: 1rem;        // 16px   Hero cards, dialogs
+$radius-2xl: 1.5rem;     // 24px   Feature sections
+$radius-full: 9999px;          //  Chips, avatars, circular buttons

@@ -1,0 +1,32 @@
+// @use '@angular/material' as mat;
+
+// html {
+//   @include mat.theme((
+//     color: (
+//       primary: mat.$rose-palette,
+//       tertiary: mat.$yellow-palette,
+//     ),
+//     typography: Roboto,
+//     density: 0,
+//   ));
+// }
+
+// body {
+//   margin: 0;
+//   overflow-x: hidden;
+//   font-family: Roboto, Arial, sans-serif;
+// }
+// :root {
+//   --wp-hot-pink: #ff1493;
+// }
+
+// .vendor-btn {
+//   background: var(--wp-hot-pink) !important;
+//   color: white !important;
+// }
+// @use './styles/themes/wptheme';
+
+body {
+  margin:0;
+  overflow-x:hidden;
+}

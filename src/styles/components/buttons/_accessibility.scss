@@ -1,0 +1,63 @@
+/**
+ * =============================================================================
+ * WeddingPro Design System
+ * -----------------------------------------------------------------------------
+ * Component : Button
+ * File      : 07-states.scss
+ * Purpose   : Defines interactive states for the button component.
+ *             This file consumes the component API defined by variants,
+ *             sizes, and elevation.
+ * =============================================================================
+ */
+
+.wp-button {
+
+  /* ---------------------------------------------------------------------------
+   * Hover
+   * ------------------------------------------------------------------------- */
+
+  &:hover:not(:disabled):not(.is-loading) {
+    background-color: var(--wp-button-hover-bg);
+    color: var(--wp-button-hover-color);
+    border-color: var(--wp-button-hover-border);
+    box-shadow: var(--wp-button-hover-shadow);
+  }
+
+  /* ---------------------------------------------------------------------------
+   * Active
+   * ------------------------------------------------------------------------- */
+
+  &:active:not(:disabled):not(.is-loading) {
+    background-color: var(--wp-button-active-bg);
+    color: var(--wp-button-active-color);
+    border-color: var(--wp-button-active-border);
+    box-shadow: var(--wp-button-active-shadow);
+
+    transform: scale(0.98);
+  }
+
+  /* ---------------------------------------------------------------------------
+   * Disabled
+   * ------------------------------------------------------------------------- */
+
+  &:disabled,
+  &.is-disabled {
+    background-color: var(--wp-button-disabled-bg);
+    color: var(--wp-button-disabled-color);
+    border-color: var(--wp-button-disabled-border);
+    box-shadow: var(--wp-button-disabled-shadow);
+
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  /* ---------------------------------------------------------------------------
+   * Loading
+   * ------------------------------------------------------------------------- */
+
+  &.is-loading {
+    cursor: wait;
+    pointer-events: none;
+  }
+
+}

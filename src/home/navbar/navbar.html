@@ -1,0 +1,30 @@
+<mat-toolbar class="NavBar">
+  <!-- Logo -->
+  <div class="logo">
+    <span><h1> Wedding PRO</h1></span>
+   </div>
+       <span class="spacer"></span>
+       <span class="spacer"></span>
+    @for (item of navbarItems(); track $index) {
+       <span>{{item.title}}</span>
+    }
+           <span class="spacer"></span>
+       <span class="spacer"></span>
+       <span>List Your Business</span>
+       <mat-icon mat-icon-button>account_circle</mat-icon>
+           
+  
+  
+</mat-toolbar>
+<mat-toolbar class="mobileNav">
+  <!-- Logo -->
+  <div class="logo left">
+    <span><h3> Wedding PRO</h3></span>
+   </div>
+       <!-- <span class="spacer"></span>
+       <span class="spacer"></span> -->
+       <!-- <span class="right">Login</span> -->
+       <!-- <mat-icon mat-icon-button>account_circle</mat-icon> -->
+          <mat-icon mat-icon-button>menu</mat-icon>
+    
+</mat-toolbar>

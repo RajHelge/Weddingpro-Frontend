@@ -1,0 +1,12 @@
+/* ==========================================
+   Transition & Animation Durations
+   ========================================== */
+
+$duration-instant: 0ms;      // Usage: No animation
+$duration-fastest: 100ms;    // Usage: Ripple, tooltip, pressed state
+$duration-faster: 150ms;     // Usage: Icon hover, chip hover
+$duration-fast: 200ms;       // Usage: Buttons, links, input focus
+$duration-normal: 300ms;     // Usage: Cards, dropdowns, accordions
+$duration-slow: 400ms;       // Usage: Side navigation, expansion panels
+$duration-slower: 500ms;     // Usage: Dialogs, modals
+$duration-slowest: 700ms;    // Usage: Hero sections, page transitions

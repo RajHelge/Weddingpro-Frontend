@@ -1,0 +1,121 @@
+/**
+ * =============================================================================
+ * WeddingPro Design System
+ * -----------------------------------------------------------------------------
+ * Component : Button
+ * File      : 03-variants.scss
+ * Purpose   : Defines the visual variants for the button component by assigning
+ *             CSS custom properties. No structural or behavioral styles belong
+ *             in this file.
+ * =============================================================================
+ */
+
+/* ==========================================================================
+   Primary
+   ========================================================================== */
+
+.wp-button--primary {
+
+  --wp-button-bg: var(--wp-color-primary);
+  --wp-button-color: var(--wp-color-on-primary);
+  --wp-button-border: var(--wp-color-primary);
+  --wp-button-shadow: none;
+
+  --wp-button-hover-bg: var(--wp-color-primary-hover);
+  --wp-button-hover-color: var(--wp-color-on-primary);
+  --wp-button-hover-border: var(--wp-color-primary-hover);
+  --wp-button-hover-shadow: none;
+
+  --wp-button-active-bg: var(--wp-color-primary-active);
+  --wp-button-active-color: var(--wp-color-on-primary);
+  --wp-button-active-border: var(--wp-color-primary-active);
+  --wp-button-active-shadow: none;
+
+  --wp-button-focus-ring: var(--wp-color-primary-focus);
+
+  --wp-button-disabled-bg: var(--wp-color-neutral-300);
+  --wp-button-disabled-color: var(--wp-color-neutral-500);
+  --wp-button-disabled-border: var(--wp-color-neutral-300);
+  --wp-button-disabled-shadow: none;
+
+}
+
+/* ==========================================================================
+   Secondary
+   ========================================================================== */
+
+.wp-button--secondary {
+
+  /* Same API */
+
+}
+
+/* ==========================================================================
+   Outline
+   ========================================================================== */
+
+.wp-button--outline {
+
+  /* Same API */
+
+}
+
+/* ==========================================================================
+   Ghost
+   ========================================================================== */
+
+.wp-button--ghost {
+
+  /* Same API */
+
+}
+
+/* ==========================================================================
+   Text
+   ========================================================================== */
+
+.wp-button--text {
+
+  /* Same API */
+
+}
+
+/* ==========================================================================
+   Danger
+   ========================================================================== */
+
+.wp-button--danger {
+
+  /* Same API */
+
+}
+
+/* ==========================================================================
+   Success
+   ========================================================================== */
+
+.wp-button--success {
+
+  /* Same API */
+
+}
+
+/* ==========================================================================
+   Warning
+   ========================================================================== */
+
+.wp-button--warning {
+
+  /* Same API */
+
+}
+
+/* ==========================================================================
+   Info
+   ========================================================================== */
+
+.wp-button--info {
+
+  /* Same API */
+
+}

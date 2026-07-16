@@ -1,0 +1,110 @@
+/**
+ * =============================================================================
+ * WeddingPro Design System
+ * -----------------------------------------------------------------------------
+ * Component : Button
+ * File      : 04-sizes.scss
+ * Purpose   : Defines button dimensions using CSS custom properties.
+ *             This file only assigns values. It does not apply styles.
+ * =============================================================================
+ */
+
+/* ==========================================================================
+   Extra Small
+   ========================================================================== */
+
+.wp-button--xs {
+  --wp-button-min-height: 30px;
+  --wp-button-padding-x: var(--wp-space-2);
+  --wp-button-padding-y: var(--wp-space-1);
+
+  --wp-button-gap: var(--wp-space-1);
+
+  --wp-button-font-size: var(--wp-font-size-xs);
+  --wp-button-font-weight: var(--wp-font-weight-medium);
+  --wp-button-line-height: var(--wp-line-height-tight);
+
+  --wp-button-icon-size: 0.875rem;
+
+  --wp-button-radius: var(--wp-radius-sm);
+}
+
+/* ==========================================================================
+   Small
+   ========================================================================== */
+
+.wp-button--sm {
+  --wp-button-min-height: 36px;
+  --wp-button-padding-x: var(--wp-space-3);
+  --wp-button-padding-y: var(--wp-space-2);
+
+  --wp-button-gap: var(--wp-space-2);
+
+  --wp-button-font-size: var(--wp-font-size-sm);
+  --wp-button-font-weight: var(--wp-font-weight-medium);
+  --wp-button-line-height: var(--wp-line-height-tight);
+
+  --wp-button-icon-size: 1rem;
+
+  --wp-button-radius: var(--wp-radius-md);
+}
+
+/* ==========================================================================
+   Medium (Default)
+   ========================================================================== */
+
+.wp-button--md {
+  --wp-button-min-height: 42px;
+  --wp-button-padding-x: var(--wp-space-4);
+  --wp-button-padding-y: var(--wp-space-2);
+
+  --wp-button-gap: var(--wp-space-2);
+
+  --wp-button-font-size: var(--wp-font-size-md);
+  --wp-button-font-weight: var(--wp-font-weight-medium);
+  --wp-button-line-height: var(--wp-line-height-normal);
+
+  --wp-button-icon-size: 1.125rem;
+
+  --wp-button-radius: var(--wp-radius-md);
+}
+
+/* ==========================================================================
+   Large
+   ========================================================================== */
+
+.wp-button--lg {
+  --wp-button-min-height: 48px;
+  --wp-button-padding-x: var(--wp-space-5);
+  --wp-button-padding-y: var(--wp-space-3);
+
+  --wp-button-gap: var(--wp-space-3);
+
+  --wp-button-font-size: var(--wp-font-size-lg);
+  --wp-button-font-weight: var(--wp-font-weight-medium);
+  --wp-button-line-height: var(--wp-line-height-normal);
+
+  --wp-button-icon-size: 1.25rem;
+
+  --wp-button-radius: var(--wp-radius-lg);
+}
+
+/* ==========================================================================
+   Extra Large
+   ========================================================================== */
+
+.wp-button--xl {
+  --wp-button-min-height: 56px;
+  --wp-button-padding-x: var(--wp-space-6);
+  --wp-button-padding-y: var(--wp-space-4);
+
+  --wp-button-gap: var(--wp-space-3);
+
+  --wp-button-font-size: var(--wp-font-size-xl);
+  --wp-button-font-weight: var(--wp-font-weight-semibold);
+  --wp-button-line-height: var(--wp-line-height-normal);
+
+  --wp-button-icon-size: 1.375rem;
+
+  --wp-button-radius: var(--wp-radius-xl);
+}

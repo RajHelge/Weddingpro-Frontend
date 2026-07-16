@@ -1,0 +1,125 @@
+/*==========================================================
+WeddingPro Design System
+
+File: _reset.scss
+
+Description:
+Normalizes browser defaults and establishes a consistent
+foundation across browsers.
+
+Contents:
+1. Box Model
+2. Margin & Padding Reset
+3. Media Elements
+4. Forms
+5. Lists
+6. Tables
+7. Accessibility
+
+Rule:
+❌ Never define the WeddingPro design language here.
+✅ Only normalize browser behavior.
+
+==========================================================*/
+
+
+/*==========================================
+=            Box Model
+==========================================*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/*==========================================
+=            Margin & Padding Reset
+==========================================*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*==========================================
+=            Media Elements
+==========================================*/
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+
+/*==========================================
+=            Forms
+==========================================*/
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/*==========================================
+=            Lists
+==========================================*/
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+/*==========================================
+=            Tables
+==========================================*/
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/*==========================================
+=            Accessibility
+==========================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+}
+/*==============================================================================
+  Responsive Media
+==============================================================================*/
+
+img,
+svg,
+video,
+canvas,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+  

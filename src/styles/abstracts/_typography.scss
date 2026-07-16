@@ -1,0 +1,124 @@
+/*==========================================================
+WeddingPro Design System
+
+File: _typography.scss
+
+Description:
+Typography design tokens for the WeddingPro design system.
+
+Contents:
+1. Font Families
+2. Font Weights
+3. Base Font Size
+4. Font Sizes
+5. Line Heights
+6. Letter Spacing
+7. Heading Tokens
+8. Body Tokens
+
+Rule:
+❌ Never use hardcoded font sizes in components.
+✅ Always use typography tokens or mixins.
+
+==========================================================*/
+
+
+/*==========================================
+=            Font Families
+==========================================*/
+
+$font-family-primary: 'Inter', sans-serif;
+$font-family-display: 'Playfair Display', serif;
+$font-family-monospace: monospace;
+
+
+/*==========================================
+=            Font Weights
+==========================================*/
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+
+/*==========================================
+=            Base Font Size
+==========================================*/
+
+$font-size-root: 100%;
+$font-size-base: 1rem;
+
+
+/*==========================================
+=            Font Sizes
+==========================================*/
+
+$font-size-xs: 0.75rem;      // 12px
+$font-size-sm: 0.875rem;     // 14px
+$font-size-md: 1rem;         // 16px
+$font-size-lg: 1.125rem;     // 18px
+$font-size-xl: 1.25rem;      // 20px
+
+$font-size-2xl: 1.5rem;      // 24px
+$font-size-3xl: 1.875rem;    // 30px
+$font-size-4xl: 2.25rem;     // 36px
+$font-size-5xl: 3rem;        // 48px
+$font-size-6xl: 3.75rem;     // 60px
+
+
+/*==========================================
+=            Line Heights
+==========================================*/
+
+$line-height-none: 1;
+$line-height-tight: 1.2;
+$line-height-snug: 1.35;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.7;
+$line-height-loose: 2;
+
+
+/*==========================================
+=            Letter Spacing
+==========================================*/
+
+$letter-spacing-tighter: -0.04em;
+$letter-spacing-tight: -0.02em;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.04em;
+$letter-spacing-wider: 0.08em;
+
+
+/*==========================================
+=            Heading Tokens
+==========================================*/
+
+$heading-font-family: $font-family-display;
+$heading-font-weight: $font-weight-bold;
+$heading-line-height: $line-height-tight;
+$heading-letter-spacing: $letter-spacing-tight;
+
+$heading-h1-size: $font-size-6xl;
+$heading-h2-size: $font-size-5xl;
+$heading-h3-size: $font-size-4xl;
+$heading-h4-size: $font-size-3xl;
+$heading-h5-size: $font-size-2xl;
+$heading-h6-size: $font-size-xl;
+
+
+/*==========================================
+=            Body Tokens
+==========================================*/
+
+$body-font-family: $font-family-primary;
+$body-font-weight: $font-weight-regular;
+$body-line-height: $line-height-normal;
+
+$body-xs-size: $font-size-xs;
+$body-sm-size: $font-size-sm;
+$body-md-size: $font-size-md;
+$body-lg-size: $font-size-lg;
+$body-xl-size: $font-size-xl;

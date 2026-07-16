@@ -1,0 +1,30 @@
+/**
+ * =============================================================================
+ * WeddingPro Design System
+ * -----------------------------------------------------------------------------
+ * Component : Button
+ * File      : 06-animations.scss
+ * Purpose   : Defines motion behavior and transition settings for the button
+ *             component. State selectors are intentionally excluded.
+ * =============================================================================
+ */
+
+.wp-button {
+
+  /* ---------------------------------------------------------------------------
+   * Motion
+   * ------------------------------------------------------------------------- */
+
+  transition-property:
+    background-color,
+    color,
+    border-color,
+    box-shadow,
+    transform,
+    opacity;
+
+  transition-duration: var(--wp-motion-duration-fast);
+
+  transition-timing-function: var(--wp-motion-easing-standard);
+
+}

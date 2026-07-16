@@ -1,0 +1,22 @@
+/**
+ * =============================================================================
+ * WeddingPro Design System
+ * -----------------------------------------------------------------------------
+ * Component : Button
+ * File      : 09-rtl.scss
+ * Purpose   : RTL support.
+ * =============================================================================
+ */
+
+/* No RTL overrides required. */
+
+/*
+ * This component is inherently RTL-friendly because:
+ *
+ * • Flexbox is used for layout.
+ * • gap is logical and direction-independent.
+ * • Icon placement follows DOM order.
+ * • No left/right positioning is used.
+ *
+ * Future RTL-specific adjustments (if required) should be added here.
+ */

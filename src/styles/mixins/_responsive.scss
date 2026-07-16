@@ -1,0 +1,74 @@
+@use '../abstracts/breakpoints' as *;
+
+/* ==========================================
+   Responsive Mixins
+   ========================================== */
+
+/// Usage: Generic responsive mixin (Internal use)
+@mixin respond($min: null, $max: null) {
+
+    @if $min != null and $max != null {
+
+        @media (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+
+    } @else if $min != null {
+
+        @media (min-width: $min) {
+            @content;
+        }
+
+    } @else if $max != null {
+
+        @media (max-width: $max) {
+            @content;
+        }
+
+    }
+
+}
+
+/// Usage: Phones (<576px)
+@mixin phone {
+    @include respond($max: $breakpoint-sm) {
+        @content;
+    }
+}
+
+/// Usage: Tablets (576px - 768px)
+@mixin tablet {
+    @include respond(
+        $min: $breakpoint-sm + 0.0625rem,
+        $max: $breakpoint-md
+    ) {
+        @content;
+    }
+}
+
+/// Usage: Laptops (768px - 1024px)
+@mixin laptop {
+    @include respond(
+        $min: $breakpoint-md + 0.0625rem,
+        $max: $breakpoint-lg
+    ) {
+        @content;
+    }
+}
+
+/// Usage: Desktops (1024px - 1280px)
+@mixin desktop {
+    @include respond(
+        $min: $breakpoint-lg + 0.0625rem,
+        $max: $breakpoint-xl
+    ) {
+        @content;
+    }
+}
+
+/// Usage: Large desktops (>=1280px)
+@mixin wide {
+    @include respond($min: $breakpoint-xl + 0.0625rem) {
+        @content;
+    }
+}

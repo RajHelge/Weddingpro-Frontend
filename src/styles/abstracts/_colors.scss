@@ -1,0 +1,130 @@
+/*==========================================
+=            Primitive Colors
+==========================================*/
+
+$white: #ffffff;
+$black: #000000;
+
+$gray-50: #fafafa;
+$gray-100: #f5f5f5;
+$gray-200: #eeeeee;
+$gray-300: #e0e0e0;
+$gray-400: #bdbdbd;
+$gray-500: #9e9e9e;
+$gray-600: #757575;
+$gray-700: #616161;
+$gray-800: #424242;
+$gray-900: #212121;
+
+$rose-50: #fff4f7;
+$rose-100: #ffe8ef;
+$rose-200: #ffd3e2;
+$rose-300: #ffb3cb;
+$rose-400: #ff8eb2;
+$rose-500: #d63384;
+$rose-600: #b02a6d;
+$rose-700: #8f2158;
+
+$gold-100: #fff8e1;
+$gold-200: #ffecb3;
+$gold-300: #ffe082;
+$gold-400: #ffd54f;
+$gold-500: #d4af37;
+$gold-600: #b89022;
+
+$green-500: #2e7d32;
+$orange-500: #ef6c00;
+$red-500: #d32f2f;
+$blue-500: #1976d2;
+
+/*==========================================
+=            Brand
+==========================================*/
+
+$brand-primary: $rose-500;
+$brand-primary-hover: $rose-600;
+$brand-primary-active: $rose-700;
+
+$brand-accent: $gold-500;
+$brand-accent-hover: $gold-600;
+
+
+/*==========================================
+=            Backgrounds
+==========================================*/
+$background-page: $gray-50;
+$background-section: $white;
+$background-muted: $gray-100;
+
+
+/*==========================================
+=            Surfaces
+==========================================*/
+
+$surface-card: $white;
+$surface-dialog: $white;
+$surface-hover: $gray-100;
+
+
+/*==========================================
+=            Text
+==========================================*/
+
+$text-primary: #2f2f2f;
+$text-secondary: #666666;
+$text-muted: #8a8a8a;
+$text-disabled: #b0b0b0;
+$text-inverse: $white;
+
+
+/*==========================================
+=            Borders
+==========================================*/
+
+$border-light: #ececec;
+$border-default: #dddddd;
+$border-dark: #c5c5c5;
+
+
+/*==========================================
+=            States
+==========================================*/
+
+$success: $green-500;
+$warning: $orange-500;
+$error: $red-500;
+$info: $blue-500;
+
+
+/*==========================================
+=            Links
+==========================================*/
+
+$link-color: $brand-primary;
+$link-hover: $brand-primary-hover;
+
+/*==========================================
+=            Gradients
+==========================================*/
+
+$gradient-primary:
+linear-gradient(
+135deg,
+$rose-500 0%,
+$gold-500 100%
+);
+
+$gradient-soft:
+linear-gradient(
+180deg,
+#ffffff 0%,
+#faf7f4 100%
+);
+
+$overlay-light: rgba(255,255,255,.70);
+$overlay-dark: rgba(0,0,0,.55);
+
+$backdrop: rgba(0,0,0,.45);
+
+$selection-bg: rgba($brand-primary,.18);
+$selection-text: $text-primary;

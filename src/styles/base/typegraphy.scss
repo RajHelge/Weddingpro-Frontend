@@ -1,0 +1,705 @@
+/*==============================================================================
+  Classic Software Design System (CSDS)
+
+  File:
+      _typography.scss
+
+  Layer:
+      Base
+
+  Purpose:
+      Defines the global typography foundation for semantic HTML elements.
+
+  Responsibilities:
+      ✓ Body typography
+      ✓ Heading hierarchy
+      ✓ Paragraph rhythm
+      ✓ Hyperlinks
+      ✓ Lists
+      ✓ Definition lists
+
+  Rules:
+      ❌ Do not define design tokens.
+      ❌ Do not style UI components.
+      ❌ Do not use hardcoded design values.
+      ✅ Consume typography, color and spacing tokens.
+
+  Version:
+      1.0.0
+
+==============================================================================*/
+
+@use "../abstracts" as *;
+
+
+/*==============================================================================
+  Body
+==============================================================================*/
+
+body {
+  margin: 0;
+
+  font-family: $body-font-family;
+  font-size: $body-md-size;
+  font-weight: $body-font-weight;
+  line-height: $body-line-height;
+
+  color: $text-primary;
+  background-color: $surface-primary;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-feature-settings: "kern";
+  font-kerning: normal;
+
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+
+/*==============================================================================
+  Headings
+==============================================================================*/
+
+:where(h1, h2, h3, h4, h5, h6) {
+  margin-block: 0 $space-4;
+
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  letter-spacing: $heading-letter-spacing;
+
+  color: inherit;
+
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: $heading-h1-size;
+}
+
+h2 {
+  font-size: $heading-h2-size;
+}
+
+h3 {
+  font-size: $heading-h3-size;
+}
+
+h4 {
+  font-size: $heading-h4-size;
+}
+
+h5 {
+  font-size: $heading-h5-size;
+}
+
+h6 {
+  font-size: $heading-h6-size;
+}
+
+
+/*==============================================================================
+  Paragraphs
+==============================================================================*/
+
+p {
+  margin-block: 0 $space-4;
+
+  font-family: $body-font-family;
+  font-size: $body-md-size;
+  font-weight: $body-font-weight;
+  line-height: $body-line-height;
+
+  color: inherit;
+
+  overflow-wrap: break-word;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+
+/*==============================================================================
+  Hyperlinks
+==============================================================================*/
+
+a {
+  color: $primary;
+
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+
+  cursor: pointer;
+}
+
+a:hover {
+  color: $primary-hover;
+}
+
+a:active {
+  color: $primary-active;
+}
+
+a:visited {
+  color: $primary-visited;
+}
+
+a:focus-visible {
+  outline: 2px solid $primary;
+  outline-offset: 2px;
+  border-radius: $radius-xs;
+}
+
+
+/*==============================================================================
+  Lists
+==============================================================================*/
+
+ul,
+ol {
+  margin-block: 0 $space-4;
+  padding-inline-start: $space-6;
+}
+
+li {
+  margin-block: $space-2;
+
+  font-family: inherit;
+  line-height: inherit;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-block: $space-2;
+}
+
+li > ul,
+li > ol {
+  margin-top: $space-2;
+  margin-bottom: 0;
+}
+
+
+/*==============================================================================
+  Definition Lists
+==============================================================================*/
+
+dl {
+  margin-block: 0 $space-4;
+}
+
+dt {
+  margin-bottom: $space-2;
+
+  font-weight: $font-weight-semibold;
+
+  color: inherit;
+}
+
+dd {
+  margin: 0 0 $space-4 $space-5;
+
+  color: $text-secondary;
+}
+/*==============================================================================
+  Inline Text
+==============================================================================*/
+
+strong,
+b {
+  font-weight: $font-weight-bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+small {
+  font-size: $body-sm-size;
+  line-height: inherit;
+}
+
+mark {
+  padding-inline: $space-1;
+
+  color: inherit;
+  background-color: $warning-light;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+  text-decoration-skip-ink: auto;
+  cursor: help;
+}
+
+cite {
+  font-style: italic;
+}
+
+q {
+  quotes: auto;
+}
+
+sub,
+sup {
+  position: relative;
+
+  font-size: 75%;
+  line-height: 0;
+
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+
+/*==============================================================================
+  Code
+==============================================================================*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: $font-family-monospace;
+}
+
+code {
+  padding: $space-1 $space-2;
+
+  font-size: 0.875em;
+
+  color: $text-primary;
+
+  background-color: $surface-secondary;
+
+  border-radius: $radius-sm;
+}
+
+kbd {
+  display: inline-block;
+
+  padding: $space-1 $space-2;
+
+  font-size: 0.875em;
+  font-weight: $font-weight-medium;
+
+  color: $surface-primary;
+  background-color: $text-primary;
+
+  border-radius: $radius-sm;
+}
+
+samp {
+  font-size: 0.875em;
+}
+
+pre {
+  margin-block: 0 $space-4;
+  padding: $space-4;
+
+  overflow-x: auto;
+
+  font-size: 0.875em;
+  line-height: 1.6;
+
+  color: $text-primary;
+  background-color: $surface-secondary;
+
+  border: 1px solid $border-light;
+  border-radius: $radius-md;
+}
+
+pre code {
+  padding: 0;
+
+  color: inherit;
+  background: transparent;
+
+  border-radius: 0;
+}
+
+
+/*==============================================================================
+  Blockquote
+==============================================================================*/
+
+blockquote {
+  margin-block: 0 $space-4;
+  margin-inline: 0;
+
+  padding-block: $space-2;
+  padding-inline: $space-4;
+
+  border-inline-start: 4px solid $border-light;
+
+  color: $text-secondary;
+
+  font-style: italic;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+
+/*==============================================================================
+  Figures
+==============================================================================*/
+
+figure {
+  margin: 0 0 $space-5;
+}
+
+figcaption {
+  margin-top: $space-2;
+
+  font-size: $body-sm-size;
+
+  color: $text-secondary;
+
+  text-align: center;
+}
+
+
+/*==============================================================================
+  Tables
+==============================================================================*/
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+caption {
+  margin-bottom: $space-3;
+
+  font-size: $body-sm-size;
+  font-weight: $font-weight-medium;
+
+  color: $text-secondary;
+
+  text-align: left;
+}
+
+th,
+td {
+  padding: $space-3;
+
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  font-weight: $font-weight-semibold;
+}
+
+td {
+  color: inherit;
+}
+
+
+/*==============================================================================
+  Address
+==============================================================================*/
+
+address {
+  margin-block: 0 $space-4;
+
+  font-style: normal;
+  line-height: inherit;
+}
+
+
+/*==============================================================================
+  Time
+==============================================================================*/
+
+time {
+  white-space: nowrap;
+}
+
+
+/*==============================================================================
+  Details
+==============================================================================*/
+
+details {
+  margin-block: 0 $space-4;
+}
+
+summary {
+  cursor: pointer;
+
+  font-weight: $font-weight-medium;
+
+  user-select: none;
+}
+
+summary:focus-visible {
+  outline: 2px solid $primary;
+  outline-offset: 2px;
+}
+/*==============================================================================
+  Horizontal Rule
+==============================================================================*/
+
+hr {
+  margin-block: $space-6;
+
+  border: 0;
+  border-top: 1px solid $border-light;
+}
+
+
+/*==============================================================================
+  Text Selection
+==============================================================================*/
+
+::selection {
+  color: $surface-primary;
+  background-color: $primary;
+}
+
+::-moz-selection {
+  color: $surface-primary;
+  background-color: $primary;
+}
+
+
+/*==============================================================================
+  Placeholder
+==============================================================================*/
+
+
+
+
+/*==============================================================================
+  Disabled Typography
+==============================================================================*/
+
+:disabled {
+  cursor: not-allowed;
+}
+
+
+
+/*==============================================================================
+  Responsive Typography
+==============================================================================*/
+
+@media (max-width: $breakpoint-lg) {
+
+  h1 {
+    font-size: $heading-h2-size;
+  }
+
+  h2 {
+    font-size: $heading-h3-size;
+  }
+
+  h3 {
+    font-size: $heading-h4-size;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+
+  body {
+    font-size: $body-sm-size;
+  }
+
+  h1 {
+    font-size: $heading-h3-size;
+  }
+
+  h2 {
+    font-size: $heading-h4-size;
+  }
+
+  h3 {
+    font-size: $heading-h5-size;
+  }
+
+  h4 {
+    font-size: $heading-h6-size;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+
+  body {
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: $heading-h4-size;
+  }
+
+  h2 {
+    font-size: $heading-h5-size;
+  }
+
+  h3 {
+    font-size: $heading-h6-size;
+  }
+
+  ul,
+  ol {
+    padding-inline-start: $space-5;
+  }
+
+  pre {
+    padding: $space-3;
+  }
+}
+
+
+/*==============================================================================
+  Print
+==============================================================================*/
+
+@media print {
+
+  *,
+  *::before,
+  *::after {
+    color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+    break-after: avoid-page;
+  }
+
+  p,
+  blockquote,
+  pre,
+  table {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  img,
+  svg {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+}
+
+
+/*==============================================================================
+  Accessibility
+==============================================================================*/
+
+:focus-visible {
+  outline: 2px solid $primary;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/*==============================================================================
+  Text Rendering Enhancements
+==============================================================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+dt,
+dd,
+blockquote {
+  text-rendering: optimizeLegibility;
+}
+
+
+/*==============================================================================
+  Overflow Protection
+==============================================================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+td,
+th,
+figcaption,
+blockquote {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+
+/*==============================================================================
+  End of File
+==============================================================================*/

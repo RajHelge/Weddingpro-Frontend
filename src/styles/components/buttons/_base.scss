@@ -1,0 +1,61 @@
+/**
+ * =============================================================================
+ * WeddingPro Design System
+ * -----------------------------------------------------------------------------
+ * Component : Button
+ * File      : 01-base.scss
+ * Purpose   : Defines the foundational layout, reset, and interaction behavior
+ *             shared by all button variants.
+ * =============================================================================
+ */
+
+.wp-button {
+
+  /* ---------------------------------------------------------------------------
+   * Layout
+   * ------------------------------------------------------------------------- */
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: auto;
+  overflow: hidden;
+
+  /* ---------------------------------------------------------------------------
+   * Typography
+   * ------------------------------------------------------------------------- */
+
+  font: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+
+  /* ---------------------------------------------------------------------------
+   * Reset
+   * ------------------------------------------------------------------------- */
+
+  appearance: none;
+  border: none;
+  background: transparent;
+
+  /* ---------------------------------------------------------------------------
+   * Interaction
+   * ------------------------------------------------------------------------- */
+
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+
+  /* ---------------------------------------------------------------------------
+   * Transition
+   * ------------------------------------------------------------------------- */
+
+  transition:
+    background-color var(--wp-transition-fast),
+    color var(--wp-transition-fast),
+    border-color var(--wp-transition-fast),
+    box-shadow var(--wp-transition-fast),
+    transform var(--wp-transition-fast);
+
+}

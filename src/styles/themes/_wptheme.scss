@@ -1,0 +1,75 @@
+@use '@angular/material' as mat;
+
+
+// Define your brand colors
+$wedding-primary: mat.define-palette((
+  50: #fff0f6,
+  100: #ffd6e8,
+  200: #ffadd2,
+  300: #ff85bd,
+  400: #ff5ca8,
+  500: #ff1493, // Brand hot pink
+  600: #e60083,
+  700: #cc0073,
+  800: #b30063,
+  900: #990052,
+
+  contrast: (
+    50: #000,
+    100: #000,
+    200: #000,
+    300: #000,
+    400: #000,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff
+  )
+));
+
+
+$wedding-secondary: mat.define-palette((
+  50: #fffdf5,
+  100: #fff8d6,
+  200: #ffef9e,
+  300: #ffe566,
+  400: #ffda33,
+  500: #c9a227, // Gold
+  600: #b38f20,
+  700: #94751a,
+  800: #755b14,
+  900: #59450f,
+
+  contrast: (
+    500: white
+  )
+));
+
+
+// Create Material theme
+$wedding-theme: mat.define-theme((
+  color: (
+    primary: $wedding-primary,
+    tertiary: $wedding-secondary
+  ),
+
+  typography: (
+    brand-family: 'Roboto',
+    plain-family: 'Roboto'
+  ),
+
+  density: (
+    scale: 0
+  )
+));
+
+
+// Apply theme
+html {
+
+  @include mat.all-component-themes(
+    $wedding-theme
+  );
+
+}

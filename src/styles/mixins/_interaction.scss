@@ -1,0 +1,51 @@
+@use '../abstracts/duration' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/shadow' as *;
+
+/* ==========================================
+   Interaction Mixins
+   ========================================== */
+
+/// Usage: Creates a smooth transition
+@mixin transition(
+    $property: all,
+    $duration: $duration-fast,
+    $timing: $ease-standard
+) {
+    transition: $property $duration $timing;
+}
+
+/// Usage: Adds a consistent focus ring
+@mixin focus-ring(
+    $color: $primary,
+    $width: 2px,
+    $offset: 2px
+) {
+    &:focus-visible {
+        outline: $width solid $color;
+        outline-offset: $offset;
+    }
+}
+
+/// Usage: Adds a hover lift effect
+@mixin hover-lift(
+    $translateY: -0.25rem,
+    $shadow: $shadow-lg
+) {
+     @include transition(
+    transform $duration-fast $ease-standard,
+    box-shadow $duration-fast $ease-standard
+    );
+
+    &:hover {
+        transform: translateY($translateY);
+        box-shadow: $shadow;
+    }
+}
+
+/// Usage: Makes an element behave like a clickable control
+@mixin clickable {
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
