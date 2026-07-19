@@ -25,8 +25,16 @@
 //   color: white !important;
 // }
 // @use './styles/themes/wptheme';
+@use './styles/abstracts/colors' as colors;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+.logo{color:colors.$hotpink;}
+.stars{color:yellow;font-weight: 600;}
+.mat-mdc-text-field-wrapper,.mat-mdc-card {
+  background-color: #fff !important;
+}
 body {
   margin:0;
   overflow-x:hidden;
+  font-family: 'Poppins', sans-serif;
 }

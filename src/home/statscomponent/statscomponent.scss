@@ -1,0 +1,28 @@
+@use '../../styles/layout/container' as container;
+@use '../../styles/layout/grid' as grid;
+@use '../../styles/abstracts/colors' as colors;
+
+.statics{
+    padding: 20px;
+    // border: 1px solid gray;
+    h3{text-align: center;padding: 5pxpx}
+    .mat-icon{color:colors.$hotpink;vertical-align: middle;text-align: center;align-self: center}    
+
+    
+}
+
+.staticWrapper{
+    @include container.mobile{
+        @include grid.gridwrapper(2);
+    }
+        @include container.tablet{
+        @include grid.gridwrapper(4);
+
+    }
+        @include container.desktop{
+        @include grid.gridwrapper(4);
+        .statics{
+            border: 0px solid gray;
+        }
+    }
+}

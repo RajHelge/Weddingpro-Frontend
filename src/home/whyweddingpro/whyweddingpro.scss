@@ -1,0 +1,47 @@
+@use '../../styles/abstracts/colors' as colors;
+@use '../../styles/layout/container' as container;
+h3>span{
+    color:colors.$hotpink;
+}
+.whyWeddingPro{
+   color:colors.$hotpink;
+   font-weight: 600;
+}
+.searchplanningtools{color:colors.$hotpink!important}
+video{width: 100%;height: 300px;}
+@mixin whyFeatures($columns){
+    display: grid;
+        grid-template-columns: repeat($columns,1fr);
+        gap: 10;
+        .mat-icon{color:colors.$hotpink}
+}
+@mixin weddingproWrapper($columns){
+    display: grid;
+    grid-template-columns: repeat($columns,auto);
+    gap: 10;
+    img{
+    max-width: 100%;}
+}
+.whywrapper{
+    @include container.mobile{
+        @include weddingproWrapper(1);
+    }
+    @include container.tablet{
+        @include weddingproWrapper(2);
+    }
+     @include container.desktop{
+        @include weddingproWrapper(2);
+    }
+}
+.whyFeatures{
+    @include container.mobile{
+        @include whyFeatures(1);
+    }
+    @include container.tablet{
+        @include whyFeatures(2);
+    }
+    @include container.desktop{
+        @include whyFeatures(2);
+    }
+
+}

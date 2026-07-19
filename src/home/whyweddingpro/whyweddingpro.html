@@ -1,1 +1,25 @@
-<p>whyweddingpro works!</p>
+<mat-card>
+    <mat-card-header class="whyWeddingPro">
+        <h3>Why Wedding Pro</h3></mat-card-header>
+    <mat-card-content>
+        <h3>Plan Smart,Save Time,</h3>
+        <h3><span>Enjoy</span> Every Moment</h3>
+    </mat-card-content>
+    <div class="whywrapper">
+         <div class="whyFeatures">
+            @for(s of whyFeatures();track $index){
+            <div>
+                <h4><mat-icon>{{s.icon}}</mat-icon>{{s.text}}</h4>
+                <p>{{s.subtext}}</p>
+            </div>
+            }
+             <button matButton="outlined" color="primary" class="searchplanningtools">
+            <mat-icon>arrow_forward</mat-icon>    Search Planning Tools
+            </button>
+         </div>   
+         <div>
+            <img src="../../../Images/placeholders/whyWeddingProStoryBoard.jpeg" alt="">
+         </div>
+    </div>
+   
+</mat-card>

@@ -1,1 +1,36 @@
-@use './m-vendorsearch-component.scss';
+@use '../../styles/layout/container' as container;
+
+@mixin searchwrapper{
+    margin-top: -50px;
+    z-index: 9999;
+    width: 80%;
+    margin-left: 10%;
+    background: white;
+    border-radius: 5px;
+}
+.searchwrapper{
+    .row{display: flex;justify-content: space-between}
+    @include container.mobile{
+    @include searchwrapper;
+        margin-top: -15px;
+        z-index: 1111;
+        .row{flex-direction: column}
+    }
+    @include container.tablet{
+ @include searchwrapper;
+        margin-top: -15px;
+        z-index: 1111;
+    }
+    @include container.desktop{
+        @include searchwrapper;
+        z-index: 1111;
+        
+    }
+}
+.mat-mdc-select-arrow {
+  display: none;
+}
+.searchcardHeading{
+    text-align: center;
+        
+}

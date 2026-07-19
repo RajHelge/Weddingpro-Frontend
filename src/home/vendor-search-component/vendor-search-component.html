@@ -1,16 +1,64 @@
-<mat-card>
-    <mat-card-header></mat-card-header>
+<mat-card class="searchwrapper">
+    <!-- <mat-card-header></mat-card-header> -->
     <mat-card-content>
+        <div class="searchcardHeading">
+            <h1>Find the perfect vendor for your big day</h1>
+        </div>
         <div class="row">
-            <h1>Heading one</h1>
-            <h1>Heading one</h1>
-            <h1>Heading one</h1>
-            <h1>Heading one</h1>
-            <h1>Heading one</h1>
-            <h1>Heading one</h1>
-            <h1>Heading one</h1>
-            <h1>Heading one</h1>
-            <h1>Heading one</h1>
+           <mat-form-field>
+            <mat-label>Select Venue</mat-label>
+  <mat-select #categorySelect [(value)]="selectedValue">
+    <mat-option value="1">Photographer</mat-option>
+    <mat-option value="2">Decorator</mat-option>
+    <mat-option value="3">Venue</mat-option>
+  </mat-select>
+
+  <button
+    mat-icon-button
+    matSuffix
+    type="button"
+    (click)="categorySelect.open(); $event.stopPropagation()">
+
+    <mat-icon>search</mat-icon>
+  </button>
+</mat-form-field>
+<mat-form-field>
+            <mat-label>Select Location</mat-label>
+  <mat-select #categorySelect [(value)]="selectedValue">
+    <mat-option value="1">Photographer</mat-option>
+    <mat-option value="2">Decorator</mat-option>
+    <mat-option value="3">Venue</mat-option>
+  </mat-select>
+
+  <button
+    mat-icon-button
+    matSuffix
+    type="button"
+    (click)="categorySelect.open(); $event.stopPropagation()">
+
+    <mat-icon>search</mat-icon>
+  </button>
+</mat-form-field>
+<mat-form-field>
+            <mat-label>Select Budget</mat-label>
+  <mat-select #categorySelect [(value)]="selectedValue">
+    <mat-option value="1">Photographer</mat-option>
+    <mat-option value="2">Decorator</mat-option>
+    <mat-option value="3">Venue</mat-option>
+  </mat-select>
+
+  <button
+    mat-icon-button
+    matSuffix
+    type="button"
+    (click)="categorySelect.open(); $event.stopPropagation()">
+
+    <mat-icon>search</mat-icon>
+  </button>
+</mat-form-field>
+<button mat-raised-button color="accent">
+  <mat-icon>search</mat-icon>
+</button>
         </div>
     </mat-card-content>
 </mat-card>

@@ -1,1 +1,47 @@
-<p>popular-categories works!</p>
+<mat-card>
+    <mat-card-header class="browseCategory">
+        <h3>Browse Categories</h3></mat-card-header>
+    <mat-card-content>
+        <div class="popularCategoryWrapper">
+        @for(p of popularcategory();track $index){
+            <div>
+              <img class="popularimg"
+            mat-card-image
+            [src]="p.iconImageURL"
+            [alt]="p.name"
+            loading="lazy"
+            decoding="async">
+                    <h3>{{p.categoryName}}</h3>
+            </div>
+    }
+    <div (click)="getAllCategories()">
+              <img class="popularimg"
+            mat-card-image
+            src='../../assets/apps.svg'
+            loading="lazy"
+            decoding="async">
+                    <h3>Show All </h3>
+            </div>
+        </div>
+        
+        @if(allCategories().length>0 && showall()==true){
+        <hr>
+            <div  class="allCategories">
+            @for(c of allCategories();track $index){
+                <div>
+              <img class="popularimg"
+            mat-card-image
+            [src]="c.iconImageURL"
+            [alt]="c.name"
+            loading="lazy"
+            decoding="async">
+                    <h4>{{c.categoryName}}</h4>
+            </div>
+            }
+            <div class="browseCategory" (click)="getAllCategories()">
+                  Roll Up
+            </div>
+        </div>
+    }
+    </mat-card-content>
+</mat-card>

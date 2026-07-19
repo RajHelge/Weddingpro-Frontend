@@ -3,116 +3,67 @@
 @mixin bannerBase{
    position: relative;
     min-height: 100vh;
-    // display: flex;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(../../../public/Images/banners/homepagebanner.png);
     background-position: top;
     background-position-x: center; 
+    // text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    margin-bottom: -10px;
+    padding-bottom: 50px;
 }
 
 @mixin banner-text($columns){
-    display: grid;
-    grid-template-columns: repeat($columns,1fr);
-    gap: 1;
     color: white;
-    padding: 5px;
 }
 .section-left{color:white;}
 .banner{
     @include container.mobile{
         @include bannerBase;
-        
+        // background-size: contain;
+        // min-height: fit-content;
+        background-position-x: center;
+        background-size: cover;
+        background-position-x: right;
+        padding: 2px;
     }
     @include container.tablet{
         @include bannerBase;
-        background-size:contain;
+        min-height: 100%;
+        background-size:cover;
         background-position: top;
+        background-position-x: right;
     }
     @include container.desktop{
        @include bannerBase;
     background-size: cover;
     background-position: top;
+     
+    display: flex;
+    align-items: center;      
+    justify-content: flex-start; 
+    padding: 0 8%;
     }
 }
+.Wedding-text{color:deeppink;}
 .banner-text{
+          position: relative;
+    z-index: 2;
     @include container.mobile{
         @include banner-text(1);
-        text-align: left;
-        justify-content:start;
+         padding: 1px 1px 1px;
+    //   align-items: flex-start;
+    font-size: smaller;
+    // margin-top: -30px;
+
     }
     @include container.tablet{
         @include banner-text(2);
     }
     @include container.desktop{
-        @include banner-text(2);
+        @include banner-text(1);
     }
 }
 
-// @mixin banner {
-//     position: relative;
-//     min-height: 100vh;
-//     display: flex;
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//     background-image: url(../../../public/Images/banners/homepagebanner.png);
-//     background-position: top;
-//     background-position-x: center;
-// }
-// /* Mobile */
-// @mixin banner-container{
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     gap: 10;
-//     grid-row: 1;
-//     color: white;
-//     align-items: center;
-//     padding: 10px;
-
-// }
-// @media (max-width: 599px) {
-//     .banner{
-//         @include banner;
-//     }
-//     .banner-container{
-//         @include banner-container;
-//         grid-template-columns: 1fr;
-//     }
-//  }
-
-// /* Tablet */
-// @media (min-width: 600px) and (max-width: 959px) {
-//     .banner{
-//         @include banner;
-//     }
-//         .banner-container{
-//         @include banner-container;
-//         grid-template-columns: 1fr;
-//     }
-//  }
-
-// /* Desktop */
-// @media (min-width: 960px) and (max-width: 1279px) {
-//     .banner{
-//         @include banner;
-//         background-size: cover;
-
-//     }
-//         .banner-container{
-//         @include banner-container;
-//         grid-template-columns: 1fr;
-//     }
-//  }
-
-// /* Large Desktop */
-// @media (min-width: 1280px) { 
-//     .banner{
-//         @include banner;
-//         background-size: cover;
-//     }
-//         .banner-container{
-//         @include banner-container;
-//         grid-template-columns: 1fr;
-
-//     }
-// }

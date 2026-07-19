@@ -1,0 +1,33 @@
+@use '../../styles/layout/header' as headers;
+@use '../../styles/layout/container' as container;
+@use '../../styles/components/card/listingcard' as cards;
+h3{
+    @include headers.h3Headers;
+}
+
+.listingCard{
+@include cards.ListingCard;
+}
+.featuredVendorsWrapper{
+    @include container.mobile{
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        display: flex;
+        .mat-mdc-card{
+            min-width: 75%;
+            border-left: 1px solid gray;
+            text-align: center;
+        }
+    }
+    @include container.tablet{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10;
+    }
+    @include container.desktop{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10;
+        
+    }
+}

@@ -1,1 +1,31 @@
-<p>featured-vendors works!</p>
+@if(featuredVendors()){
+<mat-card>
+    <mat-card-header><h3>Featured Vendors</h3></mat-card-header>
+</mat-card>
+<div class="featuredVendorsWrapper">
+@for(f of featuredVendors();track $index){
+    <mat-card>
+    <mat-card-content class="listingCard">
+        <img [src]="imgBaseUrl+f.storeFrontImg"/>
+        <h5 class="businessName">
+            <mat-icon class="outlined">storefront</mat-icon>
+            {{f.businessName}}</h5>
+        <h6>
+            <mat-icon class="outlined">location_on</mat-icon>
+            {{f.location}}</h6>
+        <div class="row">
+            <span>
+                <mat-icon class="outlined">ads_click</mat-icon>
+                {{f.reachcount}}</span>
+            <span>
+                <mat-icon class="outlined">currency_rupee</mat-icon>
+                {{f.priceTag}}</span>
+            <span>
+                <mat-icon class="outlined">visibility</mat-icon>
+                {{f.profileViews}}</span>
+        </div>
+    </mat-card-content>
+</mat-card>
+}
+</div>
+}

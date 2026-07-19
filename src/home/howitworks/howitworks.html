@@ -1,1 +1,17 @@
-<p>howitworks works!</p>
+<mat-card>
+    <mat-card-header>
+    </mat-card-header>
+    <mat-card-content>
+        <h3>How WeddingPRO  works</h3>
+        <h4>Plan Your Wedding In 3 Simple Steps </h4>
+        <div class="stepsWrapper">
+            @for(s of steps();track $index){
+            <div>
+                    <h3 class="stepsHeading">{{$index+1}}. <mat-icon>{{s.icon}}</mat-icon></h3>
+                    <h4>{{s.text}}</h4>
+                    <h5>{{s.subtext}}</h5>
+                </div>
+        }
+        </div>
+    </mat-card-content>
+</mat-card>

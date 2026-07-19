@@ -1,2 +1,14 @@
-<p>statscomponent works!</p>
-<button mat-raised-button color="primary">sace</button>
+<div class="staticWrapper">
+@for(item of staticsData();track $index){
+<!-- <mat-card> -->
+    <div class="statics">
+        <h3>
+            <mat-icon>{{item.icon}}</mat-icon>
+            {{item.value}}</h3>
+        <h3>{{item.title}}</h3>
+        </div>
+<!-- </mat-card> -->
+    
+
+}
+</div>

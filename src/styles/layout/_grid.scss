@@ -1,0 +1,8 @@
+@mixin gridwrapper($columns){
+    display: grid;
+    gap: 10;
+    grid-template-columns: repeat($columns,1fr);
+    gap: 10;
+    overflow-x: hidden;
+    
+}

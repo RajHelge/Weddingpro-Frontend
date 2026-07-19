@@ -1,0 +1,18 @@
+@use '../../abstracts/colors' as colors;
+@mixin ListingCard{
+    cursor: pointer;
+    img{
+        width: 100%;
+        height: 250px;
+    }
+    .businessName{text-align: center;font-weight: 600;}
+    h6{text-align: center;}
+    .mat-icon{vertical-align: middle;color:colors.$hotpink}
+    .row{
+        display: flex;
+        justify-content: space-evenly;
+        .mat-icon{vertical-align: middle;color:colors.$hotpink}
+    }
+    border-left:1px solid gray;
+    border-bottom: 1px solid gray;
+}

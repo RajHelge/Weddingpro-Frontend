@@ -1,0 +1,5 @@
+@use '../abstracts/colors' as colors;
+@mixin h3Headers{
+        color:colors.$hotpink;
+        font-weight: 600;
+}

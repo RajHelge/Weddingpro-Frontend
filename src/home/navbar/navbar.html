@@ -1,16 +1,17 @@
 <mat-toolbar class="NavBar">
   <!-- Logo -->
   <div class="logo">
-    <span><h1> Wedding PRO</h1></span>
+    <span><h1 class="logo"> Wedding PRO</h1></span>
    </div>
        <span class="spacer"></span>
        <span class="spacer"></span>
+              <span class="spacer"></span>
     @for (item of navbarItems(); track $index) {
-       <span>{{item.title}}</span>
+       <span><mat-icon mat-icon-button>{{item.icon}}</mat-icon>{{item.title}}</span>
     }
            <span class="spacer"></span>
-       <span class="spacer"></span>
-       <span>List Your Business</span>
+       
+       <span><mat-icon mat-icon-button>list_alt</mat-icon>List Your Business</span>
        <mat-icon mat-icon-button>account_circle</mat-icon>
            
   
@@ -25,6 +26,15 @@
        <span class="spacer"></span> -->
        <!-- <span class="right">Login</span> -->
        <!-- <mat-icon mat-icon-button>account_circle</mat-icon> -->
-          <mat-icon mat-icon-button>menu</mat-icon>
+          <mat-icon mat-icon-button (click)="isMenuOpen=!isMenuOpen">menu</mat-icon>
     
 </mat-toolbar>
+<div>
+  <ul [ngClass]="isMenuOpen?'show':'hide'">
+    @for(m of navbarItems();track $index){
+    <li [routerLink]="m.url"><mat-icon mat-icon-button>{{m.icon}}</mat-icon>{{m.title}}</li>
+    }
+    <li><mat-icon mat-icon-button>list_alt</mat-icon>List Your Business</li>
+    <li><mat-icon mat-icon-button>account_circle</mat-icon>Login </li>
+  </ul>
+</div>

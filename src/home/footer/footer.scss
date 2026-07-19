@@ -1,0 +1,26 @@
+@use '../../styles/layout/container' as container;
+@use '../../styles/abstracts/colors' as colors;
+
+.footerWrapper{
+    padding:4px;
+    background: colors.$black;
+    color:colors.$white;
+    ul{ 
+        li{list-style-type: none;line-height: 30px;margin-left: -40px;}
+    }
+    @include container.mobile{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 10;
+    }
+    @include container.tablet{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 10;
+    }
+    @include container.desktop{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 10;
+    }
+}
