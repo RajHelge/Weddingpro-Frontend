@@ -28,6 +28,7 @@
 @use './styles/abstracts/colors' as colors;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+@import "../public/assets/Fonts/poppins.woff2.css";
 .logo{color:colors.$hotpink;}
 .stars{color:yellow;font-weight: 600;}
 .mat-mdc-text-field-wrapper,.mat-mdc-card {

@@ -1,0 +1,26 @@
+@use '../../styles/abstracts/colors' as colors;
+@use '../../styles/layout/container' as container;
+img{
+    max-height: 500px;
+    width: auto;
+}
+.verdorsignupwrapper{
+    h2{color:colors.$hotpink}
+    .mat-mdc-raised-button{color: colors.$hotpink!important}
+    @include container.mobile{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap:1;
+        max-width:100%;
+    }
+    @include container.tablet{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:1
+    }
+    @include container.desktop{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:1
+    }
+}

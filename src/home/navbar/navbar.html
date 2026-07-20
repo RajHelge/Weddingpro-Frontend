@@ -7,12 +7,12 @@
        <span class="spacer"></span>
               <span class="spacer"></span>
     @for (item of navbarItems(); track $index) {
-       <span><mat-icon mat-icon-button>{{item.icon}}</mat-icon>{{item.title}}</span>
+       <span><mat-icon class="material-symbols-outlined" mat-icon-button>{{item.icon}}</mat-icon>{{item.title}}</span>
     }
            <span class="spacer"></span>
        
-       <span><mat-icon mat-icon-button>list_alt</mat-icon>List Your Business</span>
-       <mat-icon mat-icon-button>account_circle</mat-icon>
+       <span><mat-icon class="material-symbols-outlined" mat-icon-button>list_alt</mat-icon>List Your Business</span>
+       <mat-icon class="material-symbols-outlined" mat-icon-button>account_circle</mat-icon>
            
   
   
@@ -32,7 +32,7 @@
 <div>
   <ul [ngClass]="isMenuOpen?'show':'hide'">
     @for(m of navbarItems();track $index){
-    <li [routerLink]="m.url"><mat-icon mat-icon-button>{{m.icon}}</mat-icon>{{m.title}}</li>
+    <li [routerLink]="m.url"><mat-icon class="material-symbols-outlined" mat-icon-button>{{m.icon}}</mat-icon>{{m.title}}</li>
     }
     <li><mat-icon mat-icon-button>list_alt</mat-icon>List Your Business</li>
     <li><mat-icon mat-icon-button>account_circle</mat-icon>Login </li>

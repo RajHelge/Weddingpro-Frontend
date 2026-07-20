@@ -16,7 +16,7 @@ export class Statscomponent {
                         [
                           {title:'Vendors',value:'35K +',icon:'groups'},
                           {title:'Clients',value:'100 +',icon:'person_pin_circle'},
-                          {title:'Happy Couples',value:'50K +',icon:'partner_heart'},
+                          {title:'Happy Couples',value:'50K +',icon:'supervisor_account'},
                           {title:'Wedding Categories',value:'20',icon:'category'},])
   }
 }

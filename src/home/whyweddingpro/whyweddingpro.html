@@ -9,12 +9,12 @@
          <div class="whyFeatures">
             @for(s of whyFeatures();track $index){
             <div>
-                <h4><mat-icon>{{s.icon}}</mat-icon>{{s.text}}</h4>
+                <h4><mat-icon class="material-symbols-outlined">{{s.icon}}</mat-icon>{{s.text}}</h4>
                 <p>{{s.subtext}}</p>
             </div>
             }
              <button matButton="outlined" color="primary" class="searchplanningtools">
-            <mat-icon>arrow_forward</mat-icon>    Search Planning Tools
+            <mat-icon class="material-symbols-outlined">arrow_forward</mat-icon>    Search Planning Tools
             </button>
          </div>   
          <div>
