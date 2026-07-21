@@ -37,7 +37,20 @@
         .mat-icon{vertical-align: middle;}
 }
 
-
+@mixin submenu($columns){
+     display: grid;
+        grid-template-columns: repeat($columns,1fr);
+        gap: 10;
+        position: fixed;
+        width: 100%;
+        background-color: colors.$white;
+        color: colors.$black;
+        z-index: 555;
+        align-items: center;
+        justify-content:center;
+        span{line-height: 20px;padding:5px;cursor:pointer;
+            img{width: 64px;height:64px;vertical-align: middle;border-radius: 50%;align-self: center}}
+}
    .NavBar{
 @include container.mobile{
     @include mx-navbar(1);
@@ -102,3 +115,20 @@
     opacity: 0.5;
     display: none;
   }
+  .desktopSubmenu{
+    @include container.mobile{
+        @include submenu(1);
+        display: none;
+    }
+    @include container.tablet{
+        @include submenu(3);
+        margin-top: 40px;
+    }
+    @include container.desktop{
+        @include submenu(3);
+        margin-top: 60px;
+    }
+  }
+  span:not(.spacer) {
+  cursor: pointer;
+}

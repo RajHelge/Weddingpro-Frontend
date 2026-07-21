@@ -1,0 +1,19 @@
+@use '../../styles/layout/container' as container;
+@use '../../styles/abstracts/colors' as colors;
+@use '../../styles/components/card/listingcard' as cards;
+.listingCard{
+    @include cards.ListingCard;
+}
+.listingWrapper{
+       display: grid;
+       gap: 10;
+    @include container.mobile{
+        grid-template-columns: repeat(1,1fr);
+    }
+        @include container.tablet{
+        grid-template-columns: repeat(3,1fr);
+    }
+        @include container.desktop{
+        grid-template-columns: repeat(4,1fr);
+    }
+}

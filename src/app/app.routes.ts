@@ -22,6 +22,10 @@ import { Reviews } from '../vendor/reviews/reviews';
 import { Aboutmybusiness } from '../vendor/aboutmybusiness/aboutmybusiness';
 import { Myservices } from '../vendor/myservices/myservices';
 import { MyClients } from '../vendor/my-clients/my-clients';
+import { ListingDetails } from '../home/listing-details/listing-details';
+import { Listing } from '../home/listing/listing';
+import { Venues } from '../home/venues/venues';
+import { VenuesDetails } from '../home/venues-details/venues-details';
 
 export const routes: Routes = [
 {
@@ -30,6 +34,10 @@ export const routes: Routes = [
             {path:'aboutus',component:Aboutus},
             {path:'faqs',component:Faqs},
             {path:'contactus',component:Contactus},
+            {path:'listing/:category',component:Listing},
+            {path:'lisgint-details',component:ListingDetails},
+            {path:'venues',component:Venues},
+            {path:'venues-details',component:VenuesDetails},
     ],
 },
     {path:'vendor',component:Vendoroutlet,children:[

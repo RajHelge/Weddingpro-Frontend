@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { AfterViewInit, Component, signal } from '@angular/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -40,6 +40,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   templateUrl: './homepage.html',
   styleUrls: ['./homepage.scss']
 })
-export class Homepage {
- showFiller = signal(false);
+export class Homepage implements AfterViewInit {
+  showFiller = signal(false);
+ ngAfterViewInit(): void {
+//    document.querySelectorAll('*').forEach(el => {
+//   if (el.scrollWidth > document.documentElement.clientWidth) {
+//     console.log(el, el.scrollWidth);
+//   }
+// });
+ }
 }

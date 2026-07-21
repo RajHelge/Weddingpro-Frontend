@@ -3,7 +3,7 @@
 @mixin bannerBase{
    position: relative;
     min-height: 100vh;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../../../public/Images/banners/homepagebanner.png);
     background-position: top;
@@ -17,6 +17,8 @@
 
 @mixin banner-text($columns){
     color: white;
+    overflow-wrap: anywhere;
+    max-width: 100%;
 }
 .section-left{color:white;}
 .banner{
@@ -31,7 +33,7 @@
     }
     @include container.tablet{
         @include bannerBase;
-        min-height: 100%;
+        max-height: 100%;
         background-size:cover;
         background-position: top;
         background-position-x: right;

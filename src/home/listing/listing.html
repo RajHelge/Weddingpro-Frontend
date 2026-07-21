@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<mat-card>
+    <mat-card-header><h3>Listing</h3></mat-card-header>
+    <mat-card-content>
+        <div class="listingWrapper">
+            @for(f of searchResult();track $index){
+        <mat-card>
+    <mat-card-content class="listingCard" [matTooltip]="'Click '+f.businessName+' To View Profile'">
+        <img [src]="imgBaseUrl+f.storeFrontImg"/>
+        <h5 class="businessName">
+            <mat-icon class="material-symbols-outlined">storefront</mat-icon>
+            {{f.businessName}}</h5>
+        <h6>
+            <mat-icon class="material-symbols-outlined">location_on</mat-icon>
+            
+            {{f.location}}</h6>
+        <div class="row">
+            <span matTooltip="Reach">
+                <mat-icon  class="outlined">ads_click</mat-icon>
+                {{f.reachcount}}</span>
+            <span matTooltip="Starting Price">
+                @
+                <mat-icon  class="outlined">currency_rupee</mat-icon>
+                {{f.priceTag}}</span>
+            <span matTooltip="Profile Views">
+                <mat-icon  class="outlined">visibility</mat-icon>
+                {{f.profileViews}}</span>
+        </div>
+    </mat-card-content>
+</mat-card>
+        }
+        
+</div>
+    </mat-card-content>
+    </mat-card>

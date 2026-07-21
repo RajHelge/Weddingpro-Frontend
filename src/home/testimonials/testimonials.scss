@@ -1,8 +1,13 @@
+@use '../../styles/layout/container' as container;
 .slider{
+
     position:relative;
     overflow:hidden;
     width:100%;
     // border-radius:16px;
+    @include container.mobile{
+        display: none;
+    }
 }
 
 .slides{

@@ -2,6 +2,8 @@
 
 
 .wrapper {
+  max-width: 100%;
+  overflow-x:hidden ;
   @include container.mobile {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
