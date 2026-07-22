@@ -1,0 +1,33 @@
+@use '../../../styles/layout/container' as container;
+
+.storefrontimg{
+       display: grid;
+    @include container.mobile{
+     grid-template-columns: repeat(1,1fr);
+        img{
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1;
+            max-height: 200px;
+        }
+    }
+        @include container.tablet{
+        grid-template-columns: repeat(1,1fr);
+        img{
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1;
+            max-height: 300px;
+        }
+    }
+        @include container.desktop{
+        grid-template-columns: repeat(1,1fr);
+        img{
+            width: 100%;
+            aspect-ratio: 1/2;
+            max-height: 400px;
+            // max-height: 300px;
+        }
+    }
+}
+p{padding: 5px;}

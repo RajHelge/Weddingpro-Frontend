@@ -9,6 +9,7 @@ export const UrlModel= {
     allcategories:serverurl+'Categories/GetCategories?withServices=',
     GetVendorListing:serverurl+'Listing/GetVendorsListing',
     GetFeaturedVendors:serverurl+'Home/GetFeaturedVendors',
+    ListingDetails:serverurl+'Listing/GetVendorProfile?businessName='
   },
   vendor:{
 

@@ -1,18 +1,37 @@
 @use '../../styles/layout/grid' as grid;
 @use '../../styles/layout/container' as container;
 
+
+.mat-form-field {
+  width: 100%;
+}
+.section2{display: flex;flex-direction: column;justify-content: center;align-items: center;}
+.profilecirclepic{
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    justify-self:center;
+}
+
+.iconbtns{display: flex;justify-content: space-evenly;}
 .wrapper{
     display: grid;
     margin-top: 60px;
     @include container.mobile{
-
+        ul>li{display: inline-block;padding:1px;min-width: 1%;margin-left: 1%;cursor:pointer}
     }
     @include container.tablet{
         grid-template-columns: 75% 25%;
         gap: 1rem; 
+        ul>li{display: inline-block;padding:1px;min-width: 15%;margin-left: 5%;cursor:pointer}
     }
         @include container.desktop{
                 grid-template-columns: 75% 25%;
         gap: 1rem; 
+        ul>li{display: inline-block;padding:1px;min-width: 15%;margin-left: 5%;cursor:pointer}
     }
 }

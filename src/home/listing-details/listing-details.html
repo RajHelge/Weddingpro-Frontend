@@ -1,9 +1,69 @@
 <app-navbar></app-navbar>
 <div class="wrapper">
-
-    <h3>{{businessname()}}</h3>
-</div>
-<div class="wrapper">
-    <div>Section 1</div>
-    <div>Section 2</div>
+    <div>
+        <h3>{{businessname()}}</h3>
+        <ul>
+            <li (click)="scrollToFaq(0)">About us</li>
+            <li (click)="scrollToFaq(1)">Services</li>
+            <li (click)="scrollToFaq(2)">Gallery</li>
+            <li (click)="scrollToFaq(3)">Reviews</li>
+        </ul>
+        @if(vendorProfile()){
+            <div #aboutuse><app-aboutbusiness [aboutbusiness]="vendorProfile()"></app-aboutbusiness></div>
+            <div #servicepackages><app-searvices-and-packages></app-searvices-and-packages></div>
+            <div #reviews><app-listingdetail-reviews></app-listingdetail-reviews></div>
+            <div #gallery><app-listingdetail-gallery></app-listingdetail-gallery></div>
+        }
+    </div>    
+    <div>
+        <mat-card>
+            <mat-card-header>  <h3>{{businessname()}}</h3></mat-card-header>
+            <mat-card-content>
+                <div class="section2">
+                <img class="profilecirclepic" [src]="imagepath+vendorProfile().businessProfilePic" alt="">
+                <h5>{{vendorProfile().contactPerson}}</h5>
+                <span>
+                    <mat-icon class="material-symbols-outlined">home_work</mat-icon>
+                    {{vendorProfile().address}}</span>
+                <span><mat-icon class="material-symbols-outlined">location_on</mat-icon>{{vendorProfile().city}}</span>
+                <span>Member Since: {{vendorProfile().createdOn|date:'dd-MMM-yyyy'}}</span>
+                <span>Rating: {{vendorProfile().ratingCount}}</span>
+                </div>
+                
+                <div class="iconbtns">
+                    <button matMiniFab><mat-icon class="material-symbols-outlined">share</mat-icon></button>
+                    <button matMiniFab><mat-icon matMiniFab class="material-symbols-outlined">call</mat-icon></button>
+                </div>
+                <hr>
+                <div class="section2">
+                    <h3>Get in touch</h3>
+                    <form action="">
+                        <mat-form-field class="mat-form-field">
+                            <mat-label>Function</mat-label>
+                            <input matInput placeholder="Function">
+                        </mat-form-field>
+                       <mat-form-field  class="mat-form-field">
+                            <mat-label>Function Date</mat-label>
+                            <mat-date-range-input [rangePicker]="picker">
+                            <input matStartDate placeholder="Start date">
+                            <input matEndDate placeholder="End date">
+                        </mat-date-range-input>
+                        <!-- <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint> -->
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-date-range-picker #picker></mat-date-range-picker>
+                        </mat-form-field>
+                          <mat-form-field class="mat-form-field">
+                            <mat-label>Contact Number</mat-label>
+                            <input matInput placeholder="Contact Number">
+                        </mat-form-field>
+                        <mat-form-field class="mat-form-field">
+                            <mat-label>Message</mat-label>
+                            <textarea matInput placeholder="Function"></textarea>
+                        </mat-form-field>
+                        <button mat-stroked-button class="mat-form-field" color="accent">Submit</button>
+                    </form>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
 </div>

@@ -20,7 +20,11 @@ export class Testimonials implements OnInit,OnDestroy {
   ];
   ngOnInit(): void {
   this.intervalId = setInterval(() => {
+    setTimeout(() => {
+      
+    
       this.next();
+    }, 1000);
     }, 1000);
   }
    ngOnDestroy() {

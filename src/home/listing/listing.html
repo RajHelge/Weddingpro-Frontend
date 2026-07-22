@@ -2,6 +2,9 @@
 <mat-card>
     <mat-card-header><h3>Listing</h3></mat-card-header>
     <mat-card-content>
+        @if(loading()){
+        <mat-progress-bar></mat-progress-bar>
+        }@else{
         <div class="listingWrapper">
             @for(f of searchResult();track $index){
         <mat-card>
@@ -30,6 +33,6 @@
 </mat-card>
         }
         
-</div>
+        </div>}
     </mat-card-content>
     </mat-card>

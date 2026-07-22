@@ -42,4 +42,5 @@ body {
 }
 .mat-icon{
   @extend .material-symbols-outlined !optional;
+  vertical-align: middle;
 }
