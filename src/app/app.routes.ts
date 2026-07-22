@@ -35,7 +35,7 @@ export const routes: Routes = [
             {path:'faqs',component:Faqs},
             {path:'contactus',component:Contactus},
             {path:'listing/:category',component:Listing},
-            {path:'lisgint-details',component:ListingDetails},
+            {path:'lisgint-details/:businessname/:vid',component:ListingDetails},
             {path:'venues',component:Venues},
             {path:'venues-details',component:VenuesDetails},
     ],

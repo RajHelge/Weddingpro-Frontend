@@ -30,6 +30,9 @@
     }
 }
 .popularCategoryWrapper{
+    div{
+        border-right: 1px solid colors.$gray-400;
+    }
    @include container.mobile{
     
     div{min-width:75%!important;padding:0px;
