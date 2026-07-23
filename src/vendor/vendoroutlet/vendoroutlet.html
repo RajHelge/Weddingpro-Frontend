@@ -1,1 +1,25 @@
+<mat-toolbar color="accent">
+    <mat-toolbar-row>
+        <div>
+        <mat-icon class="cursorpointer material-symbols-outlined" (click)="drawer.toggle();drawerright.close()">menu</mat-icon>WeddingPro
+        </div>
+        <mat-icon class="cursorpointer material-symbols-outlined" (click)="drawerright.toggle();drawer.close()">account_circle</mat-icon>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-drawer-container class="drawer-container">
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <ul>
+    @for (item of leftNav; track $index) {
+        <li [routerLink]="item.link"><mat-icon class="material-symbols-outlined">{{item.icon}}</mat-icon> {{item.title}}</li>
+    }
+    </ul>
+  </mat-drawer>
+  <mat-drawer #drawerright mode="side" position="end">
+     <ul>
+    @for (item of rightNav; track $index) {
+        <li [routerLink]="item.link"><mat-icon class="material-symbols-outlined">{{item.icon}}</mat-icon> {{item.title}}</li>
+    }
+    </ul>
+  </mat-drawer>
 <router-outlet></router-outlet>
+</mat-drawer-container>

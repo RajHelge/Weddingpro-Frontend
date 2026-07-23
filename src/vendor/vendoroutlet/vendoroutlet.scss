@@ -1,0 +1,21 @@
+@use '../../styles/abstracts/colors' as colors;
+@use '../../styles/layout/container' as container;
+
+.mat-toolbar-row{
+    justify-content: space-between;
+    background: colors.$black;
+}
+.cursorpointer{cursor: pointer;}
+.drawer-container {
+  height: calc(100dvh - 64px);
+}
+ul>li{
+    list-style-type: none;
+    margin-left: -50px;
+    line-height: 30px;
+    padding: 15px;
+    cursor: pointer;
+    :hover{
+        color:colors.$hotpink;cursor: pointer;
+    }
+}

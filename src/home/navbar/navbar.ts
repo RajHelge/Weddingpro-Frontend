@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit, signal } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatAnchor, MatIconButton } from "@angular/material/button";
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
@@ -10,16 +10,21 @@ import { Router, RouterLink } from "@angular/router";
 import { Util } from '../../utilities/util';
 import { UrlModel } from '../../utilities/utilities';
 import { sign } from 'crypto';
+import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { Login } from '../../account/login/login';
 
 @Component({
   selector: 'app-navbar',
   standalone:true,
-  imports: [MatToolbarModule, MatIconModule, MatMenuModule,CommonModule, RouterLink],
+  imports: [MatToolbarModule, MatIconModule, MatMenuModule,CommonModule, RouterLink,MatDialogModule],
+  
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar implements OnInit {
+export class Navbar implements OnInit, OnDestroy {
  private breakpointObserver = inject(BreakpointObserver);
+  readonly dialog = inject(MatDialog);
+    // private dialogRef = inject(MatDialogRef<Login>);
   isMobile$: Observable<boolean> = this.breakpointObserver.observe([Breakpoints.Handset]).pipe(map(result => result.matches));
   navbarItems=signal<any>([
         {id:1,title:'Vendors',url:'/',icon:'storefront'},
@@ -36,6 +41,10 @@ export class Navbar implements OnInit {
   constructor(private util:Util,private router:Router){
 
   }
+  ngOnDestroy(): void {
+    // this.dialogRef.close();
+    this.dialog.closeAll();
+  }
   ngOnInit(): void {
     if(this.allcategories().length==0){
   this.getCategories();  
@@ -49,5 +58,10 @@ export class Navbar implements OnInit {
   gotoListing(category:any){
     this.showsubmenu.set(false);
     this.router.navigate(['/listing',category.seofriendlyName]);
+  }
+  openLoginDialog(){
+   var dialogref= this.dialog.open(Login).afterClosed().subscribe(res=>{
+    console.log(res);
+   })
   }
 }

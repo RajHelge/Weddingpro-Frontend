@@ -1,1 +1,65 @@
-<p>dashboard works!</p>
+<h3>Dashboard</h3>
+<div class="Wrapper">
+    <mat-card>
+            <h4>Storefront View</h4>
+        <mat-card-content>
+            <img class="storeFrontImg"/>
+            <div class="centerWrapper">
+            <button mat-stroked-button color="accent" class="centerBtn">Change Image</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+        <mat-card>
+            <mat-card-content>
+                    <h4>Business Name</h4>
+                    <h5 class="businesscategory">Business Category</h5>
+                    <ul>
+                        <li><mat-icon class="material-symbols-outlined">location_on</mat-icon>Location</li>
+                        <li><mat-icon class="material-symbols-outlined">my_location</mat-icon>Address</li>
+                        <li><mat-icon class="material-symbols-outlined">card_membership</mat-icon>Subscription Plan</li>
+                        <li><mat-icon class="material-symbols-outlined">event</mat-icon>Valid Till</li>
+                    </ul>
+                    <div class="centerWrapper">
+                    <button mat-stroked-button class="centerBtn" color="accent">Renew Plan</button>
+                        </div>
+
+        </mat-card-content>
+    </mat-card>
+</div>
+<h4>Business Insight</h4>
+<div class="businessinsightWrapper">
+    @for (item of businessinsight(); track $index) {
+    <mat-card>
+        <mat-card-content>
+            <div class="space-around">
+            <h5>{{item.heading}}</h5>
+            <h5><mat-icon class="material-symbols-outlined" [matTooltip]="item.tooltip">info</mat-icon></h5> </div>
+            <div class="centerWrapper">{{item.count}}</div>
+        </mat-card-content>
+    </mat-card>
+    }
+</div>
+<div class="space-around">
+            <button mat-stroked-button color="accent">Business Analytics</button>
+            <button mat-stroked-button color="accent">Promote Business</button>
+            <button mat-stroked-button color="accent">Business Leads</button>
+</div>
+<h4>Quick News/Update</h4>
+<div class="Wrapper">
+<mat-card>
+    <h4>News</h4>
+    <mat-card-content>
+      <ul>
+        <li>News 1</li>
+        <li>News 2</li>
+        <li>News 3</li>
+        <li>News 4</li>
+      </ul>  
+    </mat-card-content>
+</mat-card>
+<mat-card>
+    <mat-card-content>
+                    <img class="storeFrontImg"/>
+    </mat-card-content>
+</mat-card>
+</div>

@@ -9,6 +9,7 @@
             @for(f of searchResult();track $index){
         <mat-card>
     <mat-card-content class="listingCard" [matTooltip]="'Click '+f.businessName+' To View Profile'" (click)="gotoListingDetails(f)">
+         <mat-icon class="bookmarkIcon material-symbols-outlined">bookmark</mat-icon>
         <img [src]="imgBaseUrl+f.storeFrontImg"/>
         <h5 class="businessName">
             <mat-icon class="material-symbols-outlined">storefront</mat-icon>

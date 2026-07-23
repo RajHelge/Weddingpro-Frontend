@@ -16,10 +16,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule, MatDateSelectionModel } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { provideNativeDateAdapter } from '@angular/material/core';
+import { Login } from '../../account/login/login';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { Dialog, DIALOG_DATA } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-listing-details',
-  imports: [Navbar,MatCardModule,MatButtonModule,
+  imports: [Navbar,MatCardModule,MatButtonModule,Login,MatDialogModule,
     CommonModule,MatButtonModule,FormsModule,ReactiveFormsModule,MatInputModule,MatDatepickerModule,MatFormFieldModule,
     MatIconModule,Aboutbusiness,SearvicesAndPackages,ListingdetailGallery,ListingdetailReviews],
     providers: [provideNativeDateAdapter()],
@@ -28,6 +31,8 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 })
 export class ListingDetails implements OnInit {
   businessname=input<string>();
+  readonly dialog = inject(MatDialog);
+
   vid=input<string>();
   util=inject(Util);
   imagepath=UrlModel.serverImgUrl;
@@ -58,6 +63,11 @@ export class ListingDetails implements OnInit {
       case 3:
       this.gallery()?.nativeElement.scrollIntoView({behavior: 'smooth',block: 'start'});
       break;
+    }
   }
-}
+  openLoginDialog(){
+    var dialogref=this.dialog.open(Login).afterClosed().subscribe(res=>{
+      console.log(res);
+    })
+  }
 }

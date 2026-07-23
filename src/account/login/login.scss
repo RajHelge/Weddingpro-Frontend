@@ -1,0 +1,8 @@
+@use '../../styles/abstracts/colors' as colors;
+.buttonwrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.forgetpwdlink{color:colors.$blue-500};
+.signuplink{color:colors.$hotpink;text-align: center;align-items: center;}

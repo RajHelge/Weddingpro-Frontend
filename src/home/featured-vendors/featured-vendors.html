@@ -6,6 +6,7 @@
 @for(f of featuredVendors();track $index){
     <mat-card>
     <mat-card-content class="listingCard">
+        <mat-icon class="bookmarkIcon material-symbols-outlined">bookmark</mat-icon>
         <img [src]="imgBaseUrl+f.storeFrontImg"/>
         <h5 class="businessName">
             <mat-icon class="outlined">storefront</mat-icon>

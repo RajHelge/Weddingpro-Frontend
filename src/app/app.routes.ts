@@ -53,14 +53,19 @@ export const routes: Routes = [
 },
     {path:'vendor',component:Vendoroutlet,children:[
             {path:'',component:Dashboard},
-            {path:'profile',component:Myprofile},
-            {path:'account',component:Account},
+            {path:'my-business-info',component:Myprofile},
+            {path:'my-business-services',component:Account},
             {path:'my-promotions',component:Mypromotions},
             {path:'my-leads',component:Myleads},
-            {path:'business-intro',component:Aboutmybusiness},
+            {path:'my-business-intro',component:Aboutmybusiness},
             {path:'my-reviews',component:Reviews},
             {path:'my-services',component:Myservices},
             {path:'my-clients',component:MyClients},
+            {path:'my-promotions',component:MyClients},
+            {path:'book-promotion',component:MyClients},
+            {path:'my-feedback',component:MyClients},
+            {path:'analytics',component:MyClients},
+            {path:'my-account',component:MyClients},
     ]
 },
 {

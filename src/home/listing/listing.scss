@@ -4,6 +4,7 @@
 .listingCard{
     @include cards.ListingCard;
 }
+
 .listingWrapper{
        display: grid;
        gap: 10;
