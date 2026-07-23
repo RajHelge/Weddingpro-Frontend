@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 import { MatIcon } from "@angular/material/icon";
 @Component({
   selector: 'app-popular-categories',
-  imports: [MatCardModule, MatButtonModule, CommonModule, MatIcon],
+  imports: [MatCardModule, MatButtonModule, CommonModule],
   providers:[Util],
   templateUrl: './popular-categories.html',
   styleUrl: './popular-categories.scss',

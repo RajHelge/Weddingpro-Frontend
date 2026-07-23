@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { afterNextRender, Component, OnDestroy, OnInit, signal } from '@angular/core';
 
 @Component({
   selector: 'app-testimonials',
@@ -7,7 +7,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   styleUrl: './testimonials.scss',
 })
 export class Testimonials implements OnInit,OnDestroy {
-  currentIndex = 0;
+  currentIndex =signal(0);
 
   intervalId!: any;
 
@@ -18,6 +18,11 @@ export class Testimonials implements OnInit,OnDestroy {
     {feedback:'We were initially overwhelmed by the number of wedding decisions we had to make. WeddingPro simplified the entire process with trusted vendors and authentic reviews. Thanks to the platform, our wedding was perfectly organized, and we enjoyed every moment without worrying about the arrangements.',image:'/Images/testimonials/T4.png',name:'Arjun & Meera, Hyderabad'},
     
   ];
+  constructor(){
+     afterNextRender(() => {
+    this.currentIndex.set(3);
+  });
+  }
   ngOnInit(): void {
   this.intervalId = setInterval(() => {
     setTimeout(() => {
@@ -29,22 +34,22 @@ export class Testimonials implements OnInit,OnDestroy {
   }
    ngOnDestroy() {
     setTimeout(() => {
-     this.currentIndex = 1;
+     this.currentIndex.set(1);
     clearInterval(this.intervalId);
   });
   }
 
   next() {
-    this.currentIndex =
-      (this.currentIndex + 1) % this.images.length;
+    this.currentIndex.set(
+      (this.currentIndex() + 1) % this.images.length);
   }
 
   previous() {
-    this.currentIndex =
-      (this.currentIndex - 1 + this.images.length) % this.images.length;
+    this.currentIndex.set(
+      (this.currentIndex() - 1 + this.images.length) % this.images.length);
   }
 
   goTo(index:number){
-    this.currentIndex=index;
+    this.currentIndex.set(index);
   }
 }

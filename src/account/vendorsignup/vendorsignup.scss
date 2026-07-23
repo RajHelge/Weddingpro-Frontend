@@ -1,0 +1,36 @@
+@use '../../styles/layout/container' as container;
+@use '../../styles/abstracts/colors' as colors;
+.doneTick{color:colors.$green-500}
+.signupimgcontainer{
+    background-image: url('/Images/placeholders/vendorsignup.png');
+    background-position: center;
+    background-size: contain;
+    max-height: min-content;
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+
+}
+.rootcard{
+    // .mat-form-field{width: 100%;}
+    @include container.mobile{
+        top: 50px;
+        .wrapper{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    @include container.tablet{
+        top: 50px;
+        .wrapper{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    @include container.desktop{
+        top: 50px;
+        .wrapper{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+}

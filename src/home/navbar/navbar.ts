@@ -14,7 +14,7 @@ import { sign } from 'crypto';
 @Component({
   selector: 'app-navbar',
   standalone:true,
-  imports: [MatToolbarModule, MatAnchor, MatIconModule, MatMenuModule, AsyncPipe, CommonModule, RouterLink, MatIconButton],
+  imports: [MatToolbarModule, MatIconModule, MatMenuModule,CommonModule, RouterLink],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })

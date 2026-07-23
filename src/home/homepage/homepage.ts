@@ -29,14 +29,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     Whyweddingpro,
     VendorSearchComponent,
     FeaturedVendors,
-    Weddinginspiration,
     Howitworks,
     Statscomponent,
     MatSidenavModule,
-    Testimonials, AppDownload,
-    Footer,
+    Testimonials,
     Vendorregistration,
-    MatSelectModule, MatCardModule, MatFormFieldModule, MatInputModule, MatButtonModule, Bannercomponent, Footer],
+    MatSelectModule, MatCardModule, MatFormFieldModule, MatInputModule, MatButtonModule, Bannercomponent],
   templateUrl: './homepage.html',
   styleUrls: ['./homepage.scss']
 })

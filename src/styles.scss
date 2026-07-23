@@ -44,3 +44,7 @@ body {
   @extend .material-symbols-outlined !optional;
   vertical-align: middle;
 }
+.mat-mdc-form-field {
+  width: 100%;
+  min-width: 100%;
+}

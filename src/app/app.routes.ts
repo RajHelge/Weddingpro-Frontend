@@ -26,6 +26,10 @@ import { ListingDetails } from '../home/listing-details/listing-details';
 import { Listing } from '../home/listing/listing';
 import { Venues } from '../home/venues/venues';
 import { VenuesDetails } from '../home/venues-details/venues-details';
+import { Accountlayout } from '../account/accountlayout/accountlayout';
+import { Login } from '../account/login/login';
+import { Vendorsignup } from '../account/vendorsignup/vendorsignup';
+import { Usersignup } from '../account/usersignup/usersignup';
 
 export const routes: Routes = [
 {
@@ -39,6 +43,13 @@ export const routes: Routes = [
             {path:'venues',component:Venues},
             {path:'venues-details',component:VenuesDetails},
     ],
+},
+{
+    path:'Account',component:Accountlayout,children:[
+        {path:'',component:Login},
+        {path:'vendor-signup',component:Vendorsignup},
+        {path:'couple-signup',component:Usersignup},
+    ]
 },
     {path:'vendor',component:Vendoroutlet,children:[
             {path:'',component:Dashboard},

@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-statscomponent',
-  imports: [MatButtonModule, MatCard, MatCardHeader, MatCardContent,MatIconModule],
+  imports: [MatButtonModule,MatIconModule],
   templateUrl: './statscomponent.html',
   styleUrl: './statscomponent.scss',
 })
