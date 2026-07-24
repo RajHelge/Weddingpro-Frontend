@@ -1,0 +1,18 @@
+
+@use '../../styles/layout/container' as container;
+@use '../../styles/abstracts/colors' as colors;
+.button_wrapper{display: flex;justify-content: space-evenly;}
+table{width: 100%;}
+th,td{text-align: center;}
+.formwrapper{
+    display: grid;
+    @include container.mobile{
+        grid-template-columns: repeat(1,1fr);
+    }
+    @include container.tablet{
+        grid-template-columns: repeat(4,1fr);
+    }
+    @include container.desktop{
+        grid-template-columns: repeat(4,1fr);
+    }
+}

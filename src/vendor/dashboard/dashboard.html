@@ -3,7 +3,7 @@
     <mat-card>
             <h4>Storefront View</h4>
         <mat-card-content>
-            <img class="storeFrontImg"/>
+            <img class="storeFrontImg" [src]="serverpath+dashboardcontent()?.storeFrontImg"/>
             <div class="centerWrapper">
             <button mat-stroked-button color="accent" class="centerBtn">Change Image</button>
             </div>
@@ -12,12 +12,12 @@
         <mat-card>
             <mat-card-content>
                     <h4>{{dashboardcontent()?.businessName}}</h4>
-                    <h5 class="businesscategory">Business Category</h5>
+                    <h5 class="businesscategory">{{dashboardcontent()?.categoryName}}</h5>
                     <ul>
-                        <li><mat-icon class="material-symbols-outlined">location_on</mat-icon>Location</li>
-                        <li><mat-icon class="material-symbols-outlined">my_location</mat-icon>Address</li>
-                        <li><mat-icon class="material-symbols-outlined">card_membership</mat-icon>Subscription Plan</li>
-                        <li><mat-icon class="material-symbols-outlined">event</mat-icon>Valid Till</li>
+                        <li><mat-icon class="material-symbols-outlined">location_on</mat-icon>{{dashboardcontent()?.city}}</li>
+                        <li><mat-icon class="material-symbols-outlined">my_location</mat-icon>{{dashboardcontent()?.districtName+', '+dashboardcontent()?.stateName}}</li>
+                        <li><mat-icon class="material-symbols-outlined">card_membership</mat-icon>{{dashboardcontent()?.activePlan}}</li>
+                        <li><mat-icon class="material-symbols-outlined">event</mat-icon>{{dashboardcontent()?.planValidity|date:'dd-MMM-yyyy'}}</li>
                     </ul>
                     <div class="centerWrapper">
                     <button mat-stroked-button class="centerBtn" color="accent">Renew Plan</button>
@@ -34,7 +34,9 @@
             <div class="space-around">
             <h5>Impression</h5>
             <h5><mat-icon class="material-symbols-outlined" matTooltip="Impress is the number of times your profile is viewed'">info</mat-icon></h5> </div>
-            <div class="centerWrapper">{{businessinsight()?.impression}}</div>
+            <div class="centerWrapper">
+                <h5>
+                {{businessinsight()?.impression}}</h5></div>
         </mat-card-content>
     </mat-card>
        <mat-card>

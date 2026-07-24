@@ -16,10 +16,11 @@ import { CommonModule } from '@angular/common';
 })
 export class Dashboard {
   util=inject(Util);
+  serverpath=UrlModel.serverImgUrl;
   vendorprofile=signal(null);
   dashboardcontent=signal<any>({});
   // businessInsight=signal([]);
-  businessinsight=signal<any>([]);
+  businessinsight=signal<any>({});
               constructor(){
                 forkJoin({
                   vendorprofile:this.util.getdata(UrlModel.vendor.vendorprofile),
@@ -28,9 +29,9 @@ export class Dashboard {
                 }).pipe(take(1)).subscribe({
                   next:((res:any)=>{
                     
-                    this.vendorprofile.set(res),
-                     this.businessinsight.set(res.data),
-                     this.dashboardcontent.set(res.data)
+                    this.vendorprofile.set(res.vendorprofile),
+                     this.businessinsight.set(res.businessinsight.data),
+                     this.dashboardcontent.set(res.dashboardcontent.data)
                   })
                 })
               }
