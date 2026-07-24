@@ -1,14 +1,14 @@
 <mat-card>
     <mat-card-header>Login</mat-card-header>
     <mat-card-content>
-        <form action="">
+        <form [formGroup]="loginform!">
             <mat-form-field>
                 <mat-label>User Name</mat-label>
-                <input matInput placeholder="User Name">
+                <input matInput placeholder="User Name" formControlName="UserName">
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Password</mat-label>
-                <input matInput placeholder="Password" type="password">
+                <input matInput placeholder="Password" type="password"  formControlName="Password">
             </mat-form-field>
             
             <div class="buttonwrapper">

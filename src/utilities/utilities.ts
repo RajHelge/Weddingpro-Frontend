@@ -11,7 +11,13 @@ export const UrlModel= {
     GetFeaturedVendors:serverurl+'Home/GetFeaturedVendors',
     ListingDetails:serverurl+'Listing/GetVendorProfile?businessName='
   },
+  account:{
+    login:serverurl+'Account/Login'
+  },
   vendor:{
+    dashboard:serverurl+'VendorDashboard/GetDashboardContent',
+    vendorprofile:serverurl+'VendorDashboard/GetVendorProfile',
+    getBusinessInsight:serverurl+'VendorDashboard/GetBusinessInsight?days=',
 
   },
   admin:{

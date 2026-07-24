@@ -11,7 +11,7 @@
     </mat-card>
         <mat-card>
             <mat-card-content>
-                    <h4>Business Name</h4>
+                    <h4>{{dashboardcontent()?.businessName}}</h4>
                     <h5 class="businesscategory">Business Category</h5>
                     <ul>
                         <li><mat-icon class="material-symbols-outlined">location_on</mat-icon>Location</li>
@@ -28,16 +28,40 @@
 </div>
 <h4>Business Insight</h4>
 <div class="businessinsightWrapper">
-    @for (item of businessinsight(); track $index) {
+    
     <mat-card>
         <mat-card-content>
             <div class="space-around">
-            <h5>{{item.heading}}</h5>
-            <h5><mat-icon class="material-symbols-outlined" [matTooltip]="item.tooltip">info</mat-icon></h5> </div>
-            <div class="centerWrapper">{{item.count}}</div>
+            <h5>Impression</h5>
+            <h5><mat-icon class="material-symbols-outlined" matTooltip="Impress is the number of times your profile is viewed'">info</mat-icon></h5> </div>
+            <div class="centerWrapper">{{businessinsight()?.impression}}</div>
         </mat-card-content>
     </mat-card>
-    }
+       <mat-card>
+        <mat-card-content>
+            <div class="space-around">
+            <h5>Enquiries</h5>
+            <h5><mat-icon class="material-symbols-outlined" matTooltip="Number of enquiries yor received">info</mat-icon></h5> </div>
+            <div class="centerWrapper">{{businessinsight()?.enquiries}}</div>
+        </mat-card-content>
+    </mat-card>
+       <mat-card>
+        <mat-card-content>
+            <div class="space-around">
+            <h5>Bookmarks</h5>
+            <h5><mat-icon class="material-symbols-outlined" matTooltip="Number of times your profile is saved">info</mat-icon></h5> </div>
+            <div class="centerWrapper">{{businessinsight()?.bookmarks}}</div>
+        </mat-card-content>
+    </mat-card>
+       <mat-card>
+        <mat-card-content>
+            <div class="space-around">
+            <h5>Reviews</h5>
+            <h5><mat-icon class="material-symbols-outlined" matTooltip="Number of reviews received on your profile">info</mat-icon></h5> </div>
+            <div class="centerWrapper">{{businessinsight()?.reviews}}</div>
+        </mat-card-content>
+    </mat-card>
+
 </div>
 <div class="space-around">
             <button mat-stroked-button color="accent">Business Analytics</button>
